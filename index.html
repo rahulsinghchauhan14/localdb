@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div>
+        <p id="encryption"></p>
+    </div>
+    <div>
+        <p id="decryption"></p>
+    </div>
+</body>
+
+<script>
+
+    let eDb = new DataEncryptor('1234','asdfasfd');
+
+    //let allTables = eDb.getAllTable('upi');
+    //eDb.createObjectStore('upi12','payment');
+    // insert data
+    //let tableName = eDb.encryptData('upi12','payment',[{ name: "John Smith 4", email: "john4@example.com" },{ name: "John Smith 4", email: "john4@example.com" },{ name: "John Smith 4", email: "john4@example.com" }]);
+ 
+    const test = async() => {
+        let vpaValue = await eDb.getData('upi12','payment');
+        console.log(vpaValue); 
+    }
+
+    test()
+
+    // console.log(vpaValue);
+    // document.getElementById("decryption").value = vpaValue;
+
+    //let AllVpaValues = eDb.getTableContent(tableName);
+
+    // eDb.tableEvent('upi', (data) => {
+    //     console.log('TableEvent', data);
+    // })
+
+    // eDb.tlobalEvent((data)=>{
+    //     console.log('GlobalEvent',data );
+    // })
+
+</script>
+
+</html>
